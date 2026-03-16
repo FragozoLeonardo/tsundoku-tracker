@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  url: <%= ENV['DATABASE_URL'] || "postgres://postgres:password@db:5432/tsundoku_development" %>
 
 test:
   <<: *default
-  database: tsundoku_test
+  url: <%= (ENV['DATABASE_URL'] || "postgres://postgres:password@db:5432/tsundoku_development").gsub('development', 'test') %>
 
 production:
   <<: *default
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  url: <%= ENV['DATABASE_URL'] %>
