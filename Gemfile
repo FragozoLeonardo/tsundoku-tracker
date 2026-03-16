@@ -43,7 +43,6 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 group :development, :test do
-
   # Use RSpec for testing
   gem "rspec-rails", "~> 5.0"
 
@@ -73,5 +72,5 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  # gem "web-console"
 end

@@ -21,7 +21,9 @@ services:
       args:
         - BUNDLE_WITHOUT=""
     container_name: tsundoku-tracker-web
-    command: sleep infinity
+    command: >
+      bash -c "bundle install &&
+              ./bin/rails server -b 0.0.0.0"
     volumes:
       - .:/rails
       - bundle_data:/usr/local/bundle
