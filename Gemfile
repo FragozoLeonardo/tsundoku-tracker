@@ -43,6 +43,21 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 group :development, :test do
+
+  # Use RSpec for testing
+  gem "rspec-rails", "~> 5.0"
+
+  # Use Factory Bot for fixtures replacement
+  gem "factory_bot_rails"
+
+  # Use Faker for generating fake data in tests and development
+
+  gem "faker"
+
+  # Use Shoulda Matchers for concise and readable tests
+
+  gem "shoulda-matchers", "~> 5.0"
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
