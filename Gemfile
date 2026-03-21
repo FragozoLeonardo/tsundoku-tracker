@@ -44,7 +44,7 @@ gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # Use RSpec for testing
-  gem "rspec-rails", "~> 5.0"
+  gem "rspec-rails", "~> 8.0"
 
   # Use Factory Bot for fixtures replacement
   gem "factory_bot_rails"
